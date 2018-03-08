@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Maps JavaScript API v3 Example: Map Simple</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type='text/javascript' src="js/lib/knockout-3.2.0.js"></script>
+  
+        <style>
+            html, body, #map {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            }
+            .ui-menu { width: 150px; }
+        </style>       
+    </head>
+    <body>
+	    <!-- Top Panel -->
+	    <div id="toppanel" class="top-panel">
+		    <span class="project-title">Neighborhood Map POI</span>
+	    </div>
+	    <!-- end top panel -->
+	    
+	    <!-- start left panel -->
+	    <div id="leftpanel" class="left-panel">
+			 <div class="poi-box">
+			 	<span style="font-size:1.4em;">Point of Interest</span>
+			 	</br>
+			 	<span>Please enter your neighborhood address:</span>
+			 	<input id="address" type="textbox" value="Los Angeles, CA">
+			 	<input id="submit" type="button" value="Search">
+		    </div>
+		    <div class="poi-box">
+			 	<span>Filter POI:</span>
+			 	<input id="searchTerm" type="textbox" data-bind="value: searchString, valueUpdate: 'afterkeydown'">
+		    </div>
+	    	<ul class="results" id="results" data-bind="foreach: filteredResult">
+	    		<li class="place" data-bind="text: name, click: poiclick"></li>
+	    	</ul>
+	    
+	    </div>
+	    <!-- end left panel -->
+        <div id="map" class="right-panel"></div>
+        <button id="closehide" class="hamburger">&#9776; </button>
+     
+    <script type='text/javascript' src="js/app.js"></script>  
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOPzF1nsjvu2rxIG8EoHRjrcUCkhZ1OUA&callback=startApp&libraries=places" onerror="errorHandling()" ></script> 
+    </body>
+</html>
