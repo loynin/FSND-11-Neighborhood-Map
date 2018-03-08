@@ -34,9 +34,9 @@ Experience the app at http://155.186.92.206:99/neighborhoodmap/
 
 To explore the codebase:
 
-Clone or download the ZIP link
-Open the index.html file.
-You need a working internet connection because the app draws information from Google Maps & Foursqure.
+- Clone or download the ZIP link
+- Open the index.html file.
+- You need a working internet connection because the app draws information from Google Maps & Foursqure.
 
 ### 4. Tools:
 ---------
