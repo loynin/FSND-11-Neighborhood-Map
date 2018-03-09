@@ -20,7 +20,7 @@ var initialGoogle = function(){
 		anchor: new google.maps.Point(0,0)
 	};
 
-}
+};
 
 // function used to get the detail of the location by providing the lat ad lng values              
 var FourSquareDetail = function(input_data){
@@ -149,7 +149,6 @@ var Location = function(home_address){
 					          infowindow.setContent(contentString);
 					          infowindow.open(map, this);
 					        });
-		            		console.log('Return my home lat: ' + myhome['lat']);
 		            		callback(myhome);
 		            		
 		          		} else {
@@ -157,7 +156,7 @@ var Location = function(home_address){
 		          		}
 			  		});
 		
-	}
+	};
 	//end of setHomeAddress
 
 
@@ -229,7 +228,7 @@ var Location = function(home_address){
 		          infowindow.open(map, this);
 		        });
       }
-    }               
+    };               
 // end search of POIs
 
 }      		
@@ -263,8 +262,8 @@ var ViewModel = function(){
 		var poi = new Location("Los Angeles, CA").searchPOIs(place['lat'],place['lng'],function(listofpoi){
 			listofpoi.forEach(function(locationItem){
 			self.locationList.push( new FourSquareDetail(locationItem));
-			})
-		})
+			});
+		});
 	});
 	
 	// Filter the POIs list when the user input the filter term on the textw box
@@ -273,7 +272,7 @@ var ViewModel = function(){
 		if (!filtered){
 			self.locationList().forEach(function(locationItem){
 				locationItem.visible(true);
-			})
+			});
 			return self.locationList();
 		}else{
 			return ko.utils.arrayFilter(self.locationList(),function(locationItem){
@@ -281,12 +280,9 @@ var ViewModel = function(){
 				var results = (str.search(filtered) >= 0);
 				locationItem.visible(results);
 				return results;
-				
-			})
+			});
 		}
 	}, self);	
-				
-	
 };
 
 // startup function
