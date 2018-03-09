@@ -231,7 +231,7 @@ var Location = function(home_address){
     };               
 // end search of POIs
 
-}      		
+};      		
 
 // ViewModel      		
 var ViewModel = function(){
