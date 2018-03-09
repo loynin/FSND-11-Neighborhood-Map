@@ -246,8 +246,8 @@ var ViewModel = function(){
 		var address = document.getElementById('address').value;	
 		var location = new Location(address).setHomeAddress(function(place){
 			self.locationList([]);
-			console.log(place['lat'] + ' and  ' + place['lng']);
-			var poi = new Location(address).searchPOIs(place['lat'],place['lng'],function(listofpoi){
+			console.log(place.lat + ' and  ' + place.lng);
+			var poi = new Location(address).searchPOIs(place.lat,place.lng,function(listofpoi){
 				listofpoi.forEach(function(locationItem){
 					self.locationList.push( new FourSquareDetail(locationItem));
 				});
@@ -258,8 +258,7 @@ var ViewModel = function(){
 	
 	// Loading the default location when the page is first started to 'Los Angeles, CA'
 	var location = new Location("Los Angeles, CA").setHomeAddress(function(place){
-		console.log(place['lat'] + ' and  ' + place['lng']);
-		var poi = new Location("Los Angeles, CA").searchPOIs(place['lat'],place['lng'],function(listofpoi){
+		var poi = new Location("Los Angeles, CA").searchPOIs(place.lat,place.lng,function(listofpoi){
 			listofpoi.forEach(function(locationItem){
 			self.locationList.push( new FourSquareDetail(locationItem));
 			});
