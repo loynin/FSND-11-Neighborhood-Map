@@ -34,7 +34,7 @@ location and mark those point of interests on the map.
 ### 3. How to Run the Project:
 --------------------------
 
-Experience the app at http://155.186.92.206:99/neighborhoodmap/
+Experience the app at http://155.186.92.206:99/FSND-11-Neighborhood-Map/
 
 To explore the codebase:
 
