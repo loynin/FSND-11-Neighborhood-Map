@@ -96,6 +96,10 @@ var FourSquareDetail = function(input_data){
 			
           infowindow.setContent(contentString);
           infowindow.open(map, this);
+          self.marker.setAnimation(google.maps.Animation.BOUNCE);
+          setTimeout(function(){
+	          self.marker.setAnimation(null);
+          },2100);
         });
     
     // link the event handler to the item list
