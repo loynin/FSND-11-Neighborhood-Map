@@ -42,11 +42,12 @@ To explore the codebase:
 ---------
 - Knockout.js
 - jQuery
+- Bootstrap Library
 - Google Map API V3
 - Foursquare API
 
 ### 5. Improvement:
 ---------------
 
-For current version, the app only provide the point of interest for 'park' type only. In the future, the app
-should display multiple location type such as school, beach, store, etc. 
+For current version, the app only provide the point of interest for 'park' place type only. In the future, the app
+should display multiple types of location such as school, beach, store, etc.

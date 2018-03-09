@@ -167,7 +167,7 @@ var Location = function(home_address){
 		  		service = new google.maps.places.PlacesService(map);
 		  		map = new google.maps.Map(document.getElementById('map'),{
 					center:currentlocation,
-					zoom: 14
+					zoom: 13
        			});
        			
        			var marker = new google.maps.Marker({
@@ -252,20 +252,6 @@ var ViewModel = function(){
 		});
 	
 	});
-	
-	// Toggle visibility of the left panel
-	document.getElementById('closehide').addEventListener('click', function() {
-					var x = document.getElementById("leftpanel");
-					var newmap = document.getElementById("map");
-					if (x.style.display === "none") {
-						x.style.display = "block";
-						newmap.style.left= "340px";
-    				} else {
-						x.style.display = "none";
-						newmap.style.left= "0px";
-    				}         
-        		});
-        			
 	
 	// Loading the default location when the page is first started to 'Los Angeles, CA'
 	var location = new Location("Los Angeles, CA").setHomeAddress(function(place){

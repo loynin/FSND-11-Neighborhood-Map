@@ -1,7 +1,8 @@
 html, body { 
 	height: 100%; 
 	margin: 0; 
-	padding: 0; 
+	padding: 0;
+	padding-top: 25px;
 }
 
 #map { 
@@ -13,14 +14,14 @@ html, body {
 }
       
 .top-panel {
-        background: #234;
+        background: #222;
         height: 50px;
         text-align: left;
         width: 100%;
         color: yellow;
 }
 .project-title{
-	left:35px;
+	left: 45px;
 	line-height: 40px;
 	position: absolute;
 	padding:5px 15px 0px 15px;
@@ -28,56 +29,20 @@ html, body {
 	font-weight:bold;
 }
 .poi-box{
-    padding: 5px 15px 0px 15px;
+    padding: 5px 5px 5px 5px;
     border: aqua;
     border-color: gray;
     background-color: cadetblue;
     margin: 5px;
+    min-width: 300px;
 }
 
 .left-panel {
-		top: 50px;
+		margin: 0;
         background: #fff;                
-        height: 100%;
-        line-height: 35px;
-        text-align: left;
-        width: 340px;
-}
-
-.right-panel {
-		top:50px;
-        bottom:0px;
-        height: 100%;
-        left: 350px;
-        position: absolute;
-        right: 0px;
-}
-      
-.btn{
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
-}
+   		min-width: 340px;
+   		padding: 1px;
+ }
 
 .hamburger{
 	background:none;
@@ -98,11 +63,6 @@ html, body {
     color: #5ea4cf; //lightsaber green
 }
 
-.closehide {
-	left:0px;
-	top:0px;
-	position:absolute
-}
 
 .results {
 	margin: 0;
@@ -112,7 +72,6 @@ html, body {
 .place {
     margin: 5px;
     padding: 10px;
-    width:310px;
     list-style: none;
     background-color: #0888;
     cursor:pointer;
@@ -121,4 +80,6 @@ html, body {
 .place:hover{
 	background-color: #91bc05;
 }
+
+
 	
